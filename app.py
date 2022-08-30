@@ -195,7 +195,7 @@ def render_tab_content(active_tab):
                             ]),
                             dbc.Row([
                                 dbc.Col([
-                                     dcc.Graph(id='scatter_chart',figure={},style={'height': '450px'},selectedData={'points': [{'hovertext':'X24_CTGACACAATGC'}]})
+                                     dcc.Loading(children=[dcc.Graph(id='scatter_chart',figure={},style={'height': '450px'},selectedData={'points': [{'hovertext':'X24_CTGACACAATGC'}]})],color='#119DFF',type='dot')
                                 ],width={'size':12,'offset':0,'order':1}),
                             ]),
                         ])
@@ -217,7 +217,7 @@ def render_tab_content(active_tab):
                                     dbc.Row([
                                         dbc.Col([
                                             html.Span(f"Sample Violin Plot for Samples",style={'text-align':'center'}),
-                                            dcc.Graph(id='violin_chart',figure={},style={'height': '200px'})
+                                            dcc.Loading(children=[dcc.Graph(id='violin_chart',figure={},style={'height': '200px'})],color='#119DFF',type='dot')
                                         ],width={'size':12,'offset':0,'order':1},style={'text-align':'center'}),
                                     ]),
                                 ])
